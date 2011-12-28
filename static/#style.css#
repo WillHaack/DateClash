@@ -1,0 +1,48 @@
+Last login: Tue Dec 27 22:45:28 on ttys001
+graham-carlings-macbook:~ Graham$ ssh gcarling@csteam.stuy.edu
+gcarling@csteam.stuy.edu's password: 
+Welcome to Ubuntu 11.10 (GNU/Linux 3.0.0-12-server x86_64)
+
+ * Documentation:  https://help.ubuntu.com/11.10/serverguide/C
+
+  System information as of Tue Dec 27 22:50:25 EST 2011
+
+  System load:  0.02              Processes:           82
+  Usage of /:   19.6% of 7.20GB   Users logged in:     2
+  Memory usage: 49%               IP address for eth0: 149.89.17.73
+  Swap usage:   1%
+
+  Graph this data and manage this system at https://landscape.canonical.com/
+Last login: Tue Dec 27 22:50:17 2011 from cpe-67-246-70-4.twcny.res.rr.com
+gcarling@csteam:~$ cd DateClash/
+gcarling@csteam:~/DateClash$ ls
+README  static  templates
+gcarling@csteam:~/DateClash$ cd ..
+gcarling@csteam:~$ cd Weekly-problems/pickupnyc/static/
+gcarling@csteam:~/Weekly-problems/pickupnyc/static$ ls
+jquery  pickupbackground.jpg  pickupnycbanner.jpg  soccerball.png  style.css
+gcarling@csteam:~/Weekly-problems/pickupnyc/static$ emacs style.css 
+
+File Edit Options Buffers Tools Help                                            
+body            { font-family: sans-serif; color: #2219B2;
+                  background: #eee;
+                  background-image:url('pickupbackground.jpg');}
+a, h1, h2       { color: #A42F6C; }
+h1, h2          { font-family: 'Georgia', serif; margin: 0; }
+h1              { border-bottom: 2px solid #eee; }
+h2              { font-size: 1.2em; }
+
+.page           { margin: 2em auto; height: 40em; width: 50em;
+                  border: 0px solid #2219B2;
+                  padding: 0.8em; background: #10192D; }
+.banner         { width: 100%; }
+.entries        { list-style: none; margin: 0; padding: 0; }
+.entries li     { margin: 0.8em 1.2em; }
+.entries li h2  { margin-left: -1em; }
+.add-entry      { font-size: 0.9em; border-bottom: 1px solid #ccc; }
+.add-entry dl   { font-weight: bold; }
+.metanav        { text-align: right; font-size: 0.8em; padding: 0.3em;
+                  margin-bottom: 1em; background: #fafafa; }
+.flash          { background: #FFFFFF; padding: 0.5em;
+                  font-family: 'Georgia', serif;
+-UU-:----F1  style.css      Top L1    Git-master  (CSS)-------------------------Loading vc-git...done
