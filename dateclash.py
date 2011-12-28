@@ -15,7 +15,7 @@ app.config.from_object(__name__)
 app.config.from_envvar('FLASKR_SETTINGS', silent=True)
 
 def init_db():
-    with closing(sqlite3.connect('/tmp/pickupnyc.db')) as db1:
+    with closing(sqlite3.connect('/tmp/dateclash.db')) as db1:
         with app.open_resource('schema.sql') as f:
             db1.cursor().executescript(f.read())
         db1.commit()
@@ -28,7 +28,7 @@ def before_request():
 @app.teardown_request
 def teardown_request(exception):
     pass
-    #TODO : close connection to db
+#TODO : close connection to db
 
 @app.route('/')
 def index():
