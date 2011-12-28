@@ -7,7 +7,7 @@ from flask import Flask, request, session, g, redirect, url_for, abort, render_t
 DATABASE = '/tmp/dateclash.db'
 DEBUG = True
 SECRET_KEY = 'development key'
-PORT = 6000
+PORT = 5050
 db = None
 app = Flask(__name__)
 

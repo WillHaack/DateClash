@@ -1,14 +1,14 @@
-body            { font-family: sans-serif; color: #2219B2; 
+body            { font-family: sans-serif; color: #000000; 
 		  background: #eee;
 		}
-a, h1, h2       { color: #A42F6C; }
+a, h1, h2       { color: #000000; }
 h1, h2          { font-family: 'Georgia', serif; margin: 0; }
 h1              { border-bottom: 2px solid #eee; }
 h2              { font-size: 1.2em; }
 
 .page           { margin: 2em auto; height: 40em; width: 50em; 
-		  border: 0px solid #2219B2;
-                  padding: 0.8em; background: #10192D; }
+		  border: 2px solid #120122;
+                  padding: 0.8em; background: #B70094; }
 .banner         { width: 100%; }
 .entries        { list-style: none; margin: 0; padding: 0; }
 .entries li     { margin: 0.8em 1.2em; }
