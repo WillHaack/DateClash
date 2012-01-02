@@ -1,7 +1,8 @@
-{% extends layout.html %}
+{% extends "layout.html" %}
+{% block body %}
 <body>
 <div class="container">
-  <div class="header"><span style="text-align: center" href="#"></span><a href="#"><img src="../static/dateclashlogo.PNG" alt="Insert Logo Here" name="Insert_logo" width="180" height="90" id="Insert_logo" style="background: #FFF; display:block;" class="fltlft" /><div class="logo_text">&quot;Best new dating site on the net!&quot;</div></a></div>
+  <div class="header"><span style="text-align: center" href="#"></span><img src="../static/dateclashlogo.PNG" alt="Insert Logo Here" name="Insert_logo" width="180" height="90" id="Insert_logo" style="background: #FFF; display:block;" class="fltlft" /><div class="logo_text">&quot;Best new dating site on the net!&quot;</div></div>
   <div class="footer">
   <div class="info_col">
     	<p>A NEW DATING SITE, WITH A TWIST!</p>
@@ -11,18 +12,17 @@
 	<div class="login_col">
     	<p>Start meeting people now! + Sign up here for a free 30 day trial with Date Clash!</p>
     	<p>Just fill out a few questions first.</p>
-    	<p>Name: </p>
-    	<p>Email:</p>
-    	<p>Confirm Email:</p>
-   	  <p>Zip-code:</p>
-    	<p>Password:</p>
-    	<p>Choose one:</p>
-    	<p>&nbsp;</p>
-    	<p>&nbsp;</p>
+    	<form action="register.html" method="POST">
+	<p>Name:  <input type="text" size="20" name="name" style="float: right; margin-right: 100px;"></input></p>
+    	<p>Email:  <input type="text" size="20" name="email1" style="float: right; margin-right: 100px;"></input></p>
+    	<p>Confirm Email:  <input type="text" size="20" name="email2" style="float: right; margin-right: 100px;"></input></p>
+   	  <p>Zip-code:  <input type="text" size="20" name="zipcode" style="float: right; margin-right: 100px;"></input></p>
+    	<p>Password:  <input type="text" size="20" name="password" style="float: right; margin-right: 100px;"></input></p>
 	</div>
   <!-- end .content --></div>
   <div class="footer">
-    <p>footer</p>
+    <p></p>
     <!-- end .footer --></div>
   <!-- end .container --></div>
 </body>
+{% endblock %}

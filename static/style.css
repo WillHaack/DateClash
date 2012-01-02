@@ -90,6 +90,7 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 	   margin-left: 8px;
 	   margin-right: 8px;
 	   width: 45%;
+	   height: 400px;
 	   background-color: #00F;
 }
 
@@ -100,5 +101,6 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 	  margin-left: 8px;
 	  margin-right: 8px;
 	  width: 50%;
+	  height: 400px;
 	  background-color: #00F;
 }

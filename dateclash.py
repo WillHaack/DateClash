@@ -35,4 +35,4 @@ def index():
     return render_template('index.html')
 
 if __name__ == '__main__':
-    app.run("csteam.stuy.edu", port=PORT)
+    app.run("localhost", port=PORT)
