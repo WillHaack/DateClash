@@ -34,5 +34,9 @@ def teardown_request(exception):
 def index():
     return render_template('index.html')
 
+#@app.route('/register', method="POST")
+#def register():
+#    return render_template('register.html')
+
 if __name__ == '__main__':
     app.run("localhost", port=PORT)
