@@ -1,25 +1,104 @@
-body            { font-family: sans-serif; color: #000000; 
-		  background: #eee;
-		}
-a, h1, h2       { color: #000000; }
-h1, h2          { font-family: 'Georgia', serif; margin: 0; }
-h1              { border-bottom: 2px solid #eee; }
-h2              { font-size: 1.2em; }
+body {
+     font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+     background: #FFF
+     margin: 0;
+     padding: 0;
+     color: #000;
+}
 
-.page           { margin: 2em auto; height: 40em; width: 50em; 
-		  border: 2px solid #120122;
-                  padding: 0.8em; background: #B70094; }
-.banner         { width: 100%; }
-.entries        { list-style: none; margin: 0; padding: 0; }
-.entries li     { margin: 0.8em 1.2em; }
-.entries li h2  { margin-left: -1em; }
-.add-entry      { font-size: 0.9em; border-bottom: 1px solid #ccc; }
-.add-entry dl   { font-weight: bold; }
-.metanav        { text-align: right; font-size: 0.8em; padding: 0.3em;
-                  margin-bottom: 1em; background: #fafafa; }
-.flash          { background: #FFFFFF; padding: 0.5em;
-		  font-family: 'Georgia', serif;
-		  font-weight: bold;
-		  color: #000000;
-                  border: 1px solid #000000; }
-.error          { background: #F0D6D6; padding: 0.5em; }
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+    padding: 0;
+    margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+    margin-top: 0;   /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+    padding-right: 15px;
+    padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+}
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+  border: none;
+}
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+a:link {
+       color: #42413C;
+       text-decoration: underline; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:visited {
+	  color: #6E6C64;
+	  text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	 text-decoration: none;
+	 color: #000;
+}
+
+/* ~~ this fixed width container surrounds the other divs ~~ */
+.container {
+	   width: 960px;
+	   background: #FFF;
+	   margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
+}
+
+/* ~~ the header is not given a width. It will extend the full width of your layout. It contains an image placeholder that should be replaced with your own linked logo ~~ */
+.header {
+	background: #FFF;
+	height: 90px;
+	text-align: center;
+}
+
+/* ~~ This is the layout information. ~~ 
+
+1) Padding is only placed on the top and/or bottom of the div. The elements within this div have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the div itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design.
+
+*/
+
+.content {
+	 padding: 10px 0;
+}
+
+/* ~~ The footer ~~ */
+.footer {
+	padding: 10px 0;
+	background: #FFF;
+}
+
+/* ~~ miscellaneous float/clear classes ~~ */
+.fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+       float: right;
+       margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the #footer is removed or taken out of the #container */
+	    clear:both;
+	    height:0;
+	    font-size: 1px;
+	    line-height: 0px;
+}
+
+
+.logo_text {
+	   padding: 25px 0;
+}
+
+.login_col {
+	   color: #FFF;
+	   position: relative;
+	   margin-left: 8px;
+	   margin-right: 8px;
+	   width: 45%;
+	   background-color: #00F;
+}
+
+.info_col {
+	  color: #FFF;
+	  float: right;
+	  position: relative;
+	  margin-left: 8px;
+	  margin-right: 8px;
+	  width: 50%;
+	  background-color: #00F;
+}
